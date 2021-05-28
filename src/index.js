@@ -7,7 +7,14 @@ var Timer = createReactClass({
 		return { counter: this.props.initialSeconds };
 	},
 	componentDidMount: function() {
-		this.setState({ counter: this.props.initialSeconds })
+		var component = this, currentCounter;
+		component.timerId = setInterval(function() {
+			currentCounter = component.state.counter;
+			if (currentCounter === 1) {
+				clearInterval(component.timerId);
+			}
+			component.setState({ counter: currentCounter - 1 });
+		}, 1000);
 	},
 	render: function() {
 		return <div>{this.state.counter}</div>;
