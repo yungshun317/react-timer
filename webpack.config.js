@@ -18,7 +18,7 @@ module.exports = {
 		open: "google-chrome"
 	},
 	module: {
-		rule: [{
+		rules: [{
 			test: /\.js$/,
 			exclude: /node_modules/,
 			use: ["babel-loader"]
