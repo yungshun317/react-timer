@@ -2,7 +2,7 @@ import createReactClass from "create-react-class";
 import React from "react";
 import ReactDom from "react-dom";
 
-/* [1] `React.createClass`` has been deprecated so we have to use the create-react-class package
+/* [1] `React.createClass` has been deprecated so we have to use the create-react-class package
 var Timer = createReactClass({
 	getInitialState: function() {
 		return { counter: this.props.initialSeconds };
@@ -23,7 +23,7 @@ var Timer = createReactClass({
 });
 */
 
-// [2] `React.Component``
+// [2] `React.Component`
 class Timer extends React.Component {
 	constructor(props) {
 		super(props);
